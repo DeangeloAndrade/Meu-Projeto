@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ideias - Casa Criativa</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:ital,wght@0,100;0,300;0,700;1,100;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body id="page-ideas">
+
+<div id="container">
+     
+     <header>
+
+          
+          <a href="Index.html">
+          <img src="LogoUmCasaCriativa.png" alt="Imagem da LogoUmCasaCriativa">
+          </a>
+          <nav>
+            <li><a href="Index.html">Início</a></li>
+            
+            <li><a class="button" href="#" onclick="oneOff()">Nova Ideia</a></li>
+
+        </nav>
+    </header>
+    <section id="title">
+        <P>Em exibição</P>
+        <h1>Ideias</h1>
+    </section>
+
+
+    <main>
+        <section id="ideas"> <!--copiei e colei essa linha 'section' e tirei o 'lest' que tinha antes, lá do index-->
+            <div class="idea">
+                 <img 
+                      src="https://image.flaticon.com/icons/svg/3039/3039657.svg" 
+                      alt="Imagem de curso de programação">
+
+
+                 <div class="content">
+                      <h3>Cursos de Programação</h3>
+                      <p>Estudo</p>
+                 <div class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate porro voluptates ratione veritatis quaerat ut neque saepe. Mollitia delectus explicabo neque iusto in ducimus debitis quae corporis facere vitae.
+                 </div>
+                 <a href="#">Ir para a Ideia</a>
+                   
+                 </div>
+            </div>
+            <!-- copiei e colei a div, para abrir mais uma caixa de ideias, já que só tinha três-->
+
+            <div class="idea">
+                <img 
+                     src="https://image.flaticon.com/icons/svg/2919/2919590.svg" 
+                     alt="Imagem de X">
+
+
+                <div class="content">
+                     <h3>Aguardando ideia</h3>
+                     <p>Aguardando ideia</p>
+                <div class="description">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate porro voluptates ratione veritatis quaerat ut neque saepe. Mollitia delectus explicabo neque iusto in ducimus debitis quae corporis facere vitae.
+                </div>
+                <a href="#">Ir para a Ideia</a>
+                  
+                </div>
+           </div>
+
+
+            <div class="idea">
+                 <img 
+                      src="https://image.flaticon.com/icons/svg/889/889119.svg" 
+                      alt="Imagem instagram teste curso">
+
+
+                 <div class="content">
+                      <h3>Cursos de mídia social</h3>
+                      <p>Instagram</p>
+                 <div class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate porro voluptates ratione veritatis quaerat ut neque saepe. Mollitia delectus explicabo neque iusto in ducimus debitis quae corporis facere vitae.
+                 </div>
+                 <a href="#">Ir para a Ideia</a>
+                   
+                 </div>
+            </div>
+
+
+            <div class="idea">
+                 <img 
+                      src="https://image.flaticon.com/icons/svg/1852/1852749.svg" 
+                      alt="Imagem de curso de violão">
+
+
+                 <div class="content">
+                      <h3>Cursos de Violão</h3>
+                      <p>Violão</p>
+                 <div class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate porro voluptates ratione veritatis quaerat ut neque saepe. Mollitia delectus explicabo neque iusto in ducimus debitis quae corporis facere vitae.
+                 </div>
+                 <a href="#">Ir para a Ideia</a>
+                   
+                 </div>
+            </div>
+            
+
+
+       </section>
+    </main>
+
+    <footer>
+                         
+        Com ❤ <a href="https://www.linkedin.com/in/deangelo-andrade/" target="_blank">Deangelo Andrade <!-- Aqui era para o meu nome gerar um link na pagina, porém, como é para teste, deixei sem por enquanto-->
+        <img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="logo linkedin"></a>
+    </footer>
+
+</div>
+
+    <!--Modal que copiei e colei do index, tela rosa da nova ideia-->
+
+    <div id="modal" class="hide">
+        <div class="content">
+             <h1>Nova Ideia</h1>
+
+
+             <form action="">
+             
+                  <div class="input-wrapper">
+                       <label for="title">Título da ideia</label>
+                       <input type="text" name="title">
+                  </div>
+             
+                  <div class="input-wrapper">
+                       <label for="category">Categoria</label>
+                       <input type="text" name="category">
+                  </div>
+
+
+                  <div class="input-wrapper">
+                       <label for="Imagem">Link da imagem</label>
+                       <input type="url" name="Imagem">
+                  </div>
+                  
+                  <div class="input-wrapper">
+                       <label for="description">Digite uma descrição para essa ideia</label>
+                       <textarea name="description" cols="30" rows="10"></textarea>
+                  </div>
+                  
+                  <div class="input-wrapper">
+                       <label for="link">Link da ideia</label>
+                       <input type="url" name="link">
+                  </div>
+
+
+                  <a href="#" onclick="oneOff()">Voltar</a>
+             
+                  <button>Salvar</button>
+             
+             
+             
+             
+             </form>
+
+
+        </div>
+   </div>
+
+
+
+
+  
+
+
+
+   <script src="scripts.js"></script>
+    
+</body>
+</html>
