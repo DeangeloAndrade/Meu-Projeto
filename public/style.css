@@ -16,6 +16,9 @@
 
     /* Global*/
 
+  
+    
+
     body {
         background: rgb(200, 199, 180);
         color: rgb(31, 28, 28);
@@ -25,6 +28,12 @@
     
         font-family: 'Montserrat', sans-serif;
         font-family: 'Raleway', sans-serif;
+    }
+
+    h1 {
+        font-size: 50px;
+        color: rgb(130, 72, 150);
+    
     }
 
     body.hideScroll {
@@ -153,7 +162,7 @@
     #modal {
         background: salmon;
     
-        position: absolute;
+        position: fixed; 
         top: 0;
 
         bottom: 0;
@@ -173,7 +182,7 @@
     }
     
     #modal .content {
-        margin-top: 15%;
+        margin-top: 5%;
         color: white;
     }
     

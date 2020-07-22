@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+
+<!--
+     HTML - 
+
+
+     Hipertext 
+
+
+     Hiper testos
+     São textos que que aceitam liks e audio visual  
+     
+     Markup 
+     Marcação feitas com <tags>
+          
+          
+     linguage
+     Linguagem  
+    
+    
+-->
+
+
+<html><!-- Isso é uma tag html -->
+
+
+     <head>
+
+          <meta charset="UTF-8">
+          <!-- Responsável por receber configurações da página -->
+          <title>Casa Criativa</title> <!-- Esse aqui é o título da guia da pag -->
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:ital,wght@0,100;0,300;0,700;1,100;1,400;1,500&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="/style.css">
+     </head>
+
+
+
+     <body>
+          
+ 
+          
+          <div id="container">
+          
+
+
+               <section id="intro">
+
+
+                    <header>
+                         <a href="/">
+                         <img src="/LogoUmCasaCriativa.png" alt=""> 
+                         </a> 
+                    </header>
+
+
+                    <main>
+
+                         <!-- o "(p)" usa-se como parágrafo, esse é o seu significado-->
+                         <p>
+                              Ficar na casa em períodos longos, não deve ser nada fácil.
+                    </p>
+                    <p>
+                         Iremos catalogar ideias,<strong> brincadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo que for necessário para tornar esse momento mais interessante.
+                    </p>
+                    <p>
+                         Comece clicando em ver ideias para ver as 
+                         ideias cadastradas e contribua adicioando a sua ideia.
+                    </p>
+               </main>
+
+
+               <section id="buttons">
+                    <button onclick="oneOff ()">+ Adicionar Ideia</button> <!-- aqui fica o butão que irá levar a segunda tela de preenchimento de formulário-->
+                    <a href="/ideais" class="button">Ver Ideias</a>
+               </section>
+                    
+                    <footer>
+                         
+                         Com ❤ <a  href="https://www.linkedin.com/in/deangelo-andrade/" target="_blank">Deangelo Andrade <!-- Aqui era para o meu nome gerar um link na pagina, porém, como é para teste, deixei sem por enquanto-->
+                         <img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="logo linkedin"></a>
+               
+                    </footer>
+               </section>
+
+
+               <section id="last-ideias">
+
+                    {% include "all_ideias.html"  %}  
+
+
+               </section>
+
+
+          </div>
+
+
+          <!--Modal-->
+
+          {% include "modal.html"  %}
+
+          <script src="/scripts.js"></script>
+     </body>
+    
+
+
+
+
+</html>

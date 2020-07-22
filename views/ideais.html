@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ideias - Casa Criativa</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Raleway:ital,wght@0,100;0,300;0,700;1,100;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body id="page-ideas">
+
+<div id="container">
+     
+     <header>
+
+          
+          <a href="/">
+          <img src="/LogoUmCasaCriativa.png" alt="Imagem da LogoUmCasaCriativa">
+          </a>
+          <nav>
+            <li><a href="/">Início</a></li>
+            
+            <li><a class="button" href="#" onclick="oneOff()">Nova Ideia</a></li>
+
+        </nav>
+    </header>
+    <section id="title">
+        <P>Em exibição</P>
+        <h1>Ideias</h1>
+    </section>
+
+
+    <main>
+        <section id="ideas"> <!--copiei e colei essa linha 'section' e tirei o 'lest' que tinha antes, lá do index-->
+               
+            
+            {% include "all_ideias.html"  %} 
+
+       </section>
+    </main>
+
+    <footer>
+                         
+        Com ❤ <a href="https://www.linkedin.com/in/deangelo-andrade/" target="_blank">Deangelo Andrade <!-- Aqui era para o meu nome gerar um link na pagina, porém, como é para teste, deixei sem por enquanto-->
+        <img src="https://image.flaticon.com/icons/svg/174/174857.svg" alt="logo linkedin"></a>
+    </footer>
+
+</div>
+
+    <!--Modal que copiei e colei do index, tela rosa da nova ideia-->
+
+
+
+
+         {% include "modal.html"  %}  
+
+
+
+
+
+   <script src="/scripts.js"></script>
+    
+</body>
+</html>
