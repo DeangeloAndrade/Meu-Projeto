@@ -7,39 +7,39 @@ const server = express()
 
 const db = require("./db")
 
-/*
+
 const ideias = [
 
         {
             img: "https://image.flaticon.com/icons/svg/3039/3039657.svg",
-            title: "Cursos de Programação",
-            category: "Estudo",
+            title: "Cursos de Programação1",
+            category: "Estudo1",
             description: "blablablabla blablabla blabla bl hfejwohfwho  newnoewn",
-            ulr: "https://www.linkedin.com/in/deangelo-andrade/",
+            ulr: "https://www.linkedin.com/in/deangelo-andrade/"
         
         },
         {
             img: "https://image.flaticon.com/icons/svg/3039/3039657.svg",
-            title: "Cursos de Deangelo",
-            category: "Estudo",
+            title: "Cursos de Programação2",
+            category: "Estudo2",
             description: "blablablabla blablabla blabla bl hfejwohfwho  newnoewn",
-            ulr: "https://www.linkedin.com/in/deangelo-andrade/",
+            ulr: "https://www.linkedin.com/in/deangelo-andrade/"
         
         },
         {
             img: "https://image.flaticon.com/icons/svg/3039/3039657.svg",
-            title: "Cursos de Programação",
-            category: "Estudo",
+            title: "Cursos de Programação3",
+            category: "Estudo3",
             description: "blablablabla blablabla blabla bl hfejwohfwho  newnoewn",
-            ulr: "https://www.linkedin.com/in/deangelo-andrade/",
+            ulr: "https://www.linkedin.com/in/deangelo-andrade/"
         
         },
         {
             img: "https://image.flaticon.com/icons/svg/3039/3039657.svg",
-            title: "Cursos de Programação",
-            category: "Estudo",
+            title: "Cursos de Programação4",
+            category: "Estudo4",
             description: "blablablabla blablabla blabla bl hfejwohfwho  newnoewn",
-            ulr: "https://www.linkedin.com/in/deangelo-andrade/",
+            ulr: "https://www.linkedin.com/in/deangelo-andrade/"
         
         },
 
@@ -47,7 +47,7 @@ const ideias = [
 
 ]
 
-// configurar arquivos estáticos (css, script, imagens)*/
+// configurar arquivos estáticos (css, script, imagens)
 
 server.use(express.static("public"))
 
@@ -55,7 +55,7 @@ server.use(express.static("public"))
 const nunjucks = require("nunjucks")
 nunjucks.configure("views", {
     express: server,
-    noCache: true,
+    noCache: true, // boolean
 })
 
 //criei uma rota /
@@ -65,24 +65,25 @@ server.get("/", function(req, res){
         db.all(`SELECT * FROM ideias`, function( err, rows){
                 if (err) return console.log(err)
 
-                const reversedIdeias = [...rows].reverse()
+                const reversedIdeias = [...ideias].reverse()
 
                 let lastIdeias = []
                 for (let idea of reversedIdeias){
                     if (lastIdeias.length < 2){
-                        lastIdeias.push(ideais)
+                        lastIdeias.push(idea)
                     }
                 }
-             
             
                 return res.render("index.html", { ideias: lastIdeias}) 
 
-    
 })
 
+
 server.get("/ideais", function(req, res){
-    
-    return res.render("ideais.html")
+
+    const reversedIdeias = [...ideias].reverse()
+
+    return res.render("ideais.html", {ideias: reversedIdeias})
 })
 
 // liguei meu servidor na porta 3000
