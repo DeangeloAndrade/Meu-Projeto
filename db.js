@@ -1,5 +1,5 @@
     const sqlite3 = require('sqlite3').verbose()
-    const db = new sqlite3.Database('./ProjetoCasaCriativa.db')
+    const db = new sqlite3.Database('./EstudoJavaScript/ProjetoPrimeiroSite/ProjetoCasaCriativa.db')
 
     db.serialize(function(){
 
@@ -18,45 +18,45 @@
         `)
 
         //Inserir dados na tabela 
-        //const query = `
-        //INSERT INTO ideias(
-          //  image,
-            //title, 
-            //category,
-            //description,
-            //link
+        const query = `
+        INSERT INTO ideias(
+            image,
+           title, 
+            category,
+            description,
+            link
 
-       // )VALUES (?,?,?,?,?);
-   // `   
-      //  const values = [
-        //    "https://image.flaticon.com/icons/svg/3039/3039657.svg",
-        //    "Cursos de Programação",
-        //    "Estudo",
-        //    "blablablabla blablabla blabla bl hfejwohfwho  newnoewn",
-        //     "https://www.linkedin.com/in/deangelo-andrade/"
-        //]
+        )VALUES (?,?,?,?,?);
+    `   
+        const values = [
+            "https://image.flaticon.com/icons/svg/3039/3039657.svg",
+            "Cursos de Programação",
+            "Estudo",
+            "blablablabla blablabla blabla bl hfejwohfwho  newnoewn",
+             "https://www.linkedin.com/in/deangelo-andrade/"
+        ]
 
-       // db.run(query, values, function(err) {
-       //     if (err) return console.log(err)
-       //     
-       //     console.log(this)
-       // })
+        db.run(query, values, function(err) {
+            if (err) return console.log(err)
+            
+            console.log(this)
+        })
        
-       //Deletar um dado na tabela
-       //db.run(`DELETE FROM ideias WHERE id = ?`, [1], function(err){
-         //  if(err) return console.log(err)
+      // Deletar um dado na tabela
+       db.run(`DELETE FROM ideias WHERE id = ?`, [1], function(err){
+           if(err) return console.log(err)
 
            //console.log("DELETEI", this)
-       //})
+       })
 
 
 
         //Consultar dado na tabela
-       // db.all(`SELECT * FROM ideias`, function( err, rows){
-         //   if (err) return console.log(err)
+        db.all(`SELECT * FROM ideias`, function( err, rows){
+            if (err) return console.log(err)
 
-           // console.log(rows)
-       // })
+            console.log(rows)
+        })
 
 
 

@@ -60,12 +60,14 @@ nunjucks.configure("views", {
 
 //criei uma rota /
 // e capturo o pedido do cliente para responder
-server.get("/", function(req, res){
-
+server.get("/", function(req, res) {
         db.all(`SELECT * FROM ideias`, function( err, rows){
-                if (err) return console.log(err)
-
-                const reversedIdeias = [...ideias].reverse()
+            if (err) { 
+                console.log(err)
+                return res.send("Erro no banco de dados!")   
+            }
+            
+                const reversedIdeias = [...rows].reverse()
 
                 let lastIdeias = []
                 for (let idea of reversedIdeias){
@@ -73,21 +75,21 @@ server.get("/", function(req, res){
                         lastIdeias.push(idea)
                     }
                 }
-            
                 return res.render("index.html", { ideias: lastIdeias}) 
-
+    })
 })
 
-
-server.get("/ideais", function(req, res){
-
-    const reversedIdeias = [...ideias].reverse()
-
-    return res.render("ideais.html", {ideias: reversedIdeias})
+server.get("/ideais", function(req, res) {
+    db.all(`SELECT * FROM ideias`, function(err, rows){
+        if (err){
+            console.log(err)
+            return res.send("Erro no banco de dados!")
+        }
+        
+        const reversedIdeias = [...rows].reverse()
+        return res.render("ideais.html", {ideias: reversedIdeias})
+    })     
 })
 
 // liguei meu servidor na porta 3000
-server.listen(3000) 
- })
-
- //test 30/07.
+server.listen(3000)
