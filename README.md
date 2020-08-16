@@ -15,4 +15,4 @@ Apendento programação com a Rocketseat e Cod3r
  <br/> 💬  &nbsp; Sobre mim: Curto tecnologias, tocar violão e Jesus
  <br/> :email: &nbsp; Entre em contato comigo: (https://www.linkedin.com/in/deangelo-andrade//)](https://www.linkedin.com/in/deangelo-andrade/) 
 | 
-[![Gmail Badge](https://deangelo.alvesdeandrade@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=deangelo.alvesdeandrade@gmail.com)](deangelo.alvesdeandrade@gmail.com)
+(https://deangelo.alvesdeandrade@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=deangelo.alvesdeandrade@gmail.com)]
