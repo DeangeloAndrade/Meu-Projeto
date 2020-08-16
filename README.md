@@ -1,4 +1,4 @@
-<img width="auto" src="">
+
 
 
 # Deangelo Andrade
